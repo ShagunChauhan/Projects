@@ -130,9 +130,9 @@ class twitter_bot(object):
 if __name__ == '__main__':
     start = time.time()
     print("Training the Bot detection classifier. Please wait a few seconds.")
-    filepath = r'C:\Users\chauh\Documents\Mini Project\Detecting-Twitter-Bots\Data/'
+    filepath = r'./Data/'
     
-    train_df = pd.read_csv(filepath + 'training_data_csv_UTF.csv')
+    train_df = pd.read_csv(filepath + 'training_data.csv')
     test_df = pd.read_csv(filepath + 'test_data.csv', sep='\t', encoding='ISO-8859-1')
     
     print("Train Accuracy: ", twitter_bot.get_accuracy_score(train_df)[0])
