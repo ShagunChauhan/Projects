@@ -25,6 +25,8 @@ urlpatterns = [
     path('changepassworddone/', auth_views.PasswordChangeDoneView.as_view(template_name='app/changepassworddone.html'), name='changepassworddone'),
     path('mobile/', views.mobile, name='mobile'),
     path('mobile/<slug:data>', views.mobile, name='mobiledata'),
+    path('laptop/', views.laptop, name='laptop'),
+    path('laptop/<slug:data>', views.laptop, name='laptopdata'),
     # path('login/', views.login, name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
     path('accounts/login/', auth_views.LoginView.as_view(template_name='app/login.html', authentication_form=LoginForm), name='login'),
